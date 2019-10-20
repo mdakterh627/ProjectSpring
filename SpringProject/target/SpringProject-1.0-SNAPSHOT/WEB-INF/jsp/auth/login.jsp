@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-4 login-sec">
                 <h2 class="text-center">Login Now</h2>
-                <form class="login-form">
+                <form class="login-form" action="/SpringProject/loginSubmit" method="POST">
                     <div class="form-group">
                         <label for="exampleInputEmail1" class="text-uppercase">User name</label>
                         <input type="text" class="form-control" placeholder="">
@@ -20,7 +20,7 @@
                         <label class="form-check-label">
 
                             <input type="checkbox" class="form-check-input">
-                            <small>Remember Me</small>
+                            <strong>Remember Me</strong>
                         </label>
 
                         <button type="submit" class="btn btn-login float-right"  >Submit</button>
@@ -52,7 +52,7 @@
                             <img class="d-block img-fluid" src="https://c0.wallpaperflare.com/preview/478/173/152/healthcare-hospital-lamp-light-thumbnail.jpg" alt="First slide" width="100%">
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="banner-text">
-                                    <h2>Welcome to Our Hospital</h2>
+                                    <h1>Welcome to Our Services</h1>
                                     <p>Deep Learning Algorithm for Lung Nodule Detection</p>
                                 </div>
                             </div>

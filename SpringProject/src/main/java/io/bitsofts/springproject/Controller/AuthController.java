@@ -54,5 +54,28 @@ public class AuthController {
          model.addAttribute("error", "Input fileds");
          return "loginPage";
      }
-    
+     
+
+@RequestMapping(method = RequestMethod.POST, value = "/signupSubmit")
+     public String signupSubmitPost(HttpServletRequest request, Model model) {
+        User u = new User();
+        u.setUsername(request.getParameter("username"));
+        u.setPassword(request.getParameter("password"));
+        u.setFirstName(request.getParameter("firstName"));
+        u.setLastName(request.getParameter("lastName"));
+        u.setAddress(request.getParameter("address"));
+        u.setGender(request.getParameter("gender"));
+        u.setPhone(Integer.parseInt(request.getParameter("phone")));
+        u.setEmail(request.getParameter("email"));
+        try{
+         repository.save(u);
+         return "loginPage";
+        }catch(Exception e){
+            System.out.println("error"+ e.getMessage());
+            model.addAttribute("error",e.getMessage());
+         return "LoginPage";
+     }
+        }
+       
+        
 }
