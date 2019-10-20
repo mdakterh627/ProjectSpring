@@ -13,14 +13,14 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
 ">
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-	<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-	<property name="url" value="jdbc:mysql://localhost:3306/"></property>
-	<property name="username" value="root"></property>
-	<property name="password" value="root"></property>
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/Spring"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="root"></property>
     </bean>
     <bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-	<property name="dataSource" ref="dataSource"></property>
-	<property name="packagesToScan" value="io.bitsofts.springwithhibernate"></property>
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="packagesToScan" value="io.bitsofts.springproject"></property>
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"></bean>
         </property>
@@ -38,8 +38,10 @@
     </bean>
     <tx:annotation-driven transaction-manager="transactionManager" />
     <context:annotation-config></context:annotation-config>
-    <context:component-scan base-package="io.bitsofts.springwithhibernate"></context:component-scan>
-    <jpa:repositories base-package="io.bitsofts.springwithhibernate" entity-manager-factory-ref="emf" 
-                  transaction-manager-ref="transactionManager" />
+    <context:component-scan base-package="io.bitsofts.springproject"></context:component-scan>
+    <jpa:repositories base-package="io.bitsofts.springproject" entity-manager-factory-ref="emf" 
+                      transaction-manager-ref="transactionManager" />
+    
+   
 
 </beans>

@@ -12,6 +12,7 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
 
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
@@ -23,8 +24,9 @@
           http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi-1.2.xsd
           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+          http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 ">
-    <context:component-scan base-package="io.bitsofts.springwithhibernate"/>
+    <context:component-scan base-package="io.bitsofts.springproject"/>
     <mvc:annotation-driven />
     <mvc:resources mapping="/static/**" location="/static/theme1/"  cache-period="31556926" />
     <!--<mvc:resources mapping="/, classpath:/META-INF/web-resources/" location="/resources/**" />-->
@@ -51,7 +53,6 @@
     <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">  
         <property name="definitions">  
             <list>  
-                <value>/WEB-INF/layout.xml</value>
                 <value>/WEB-INF/auth.xml</value>   
             </list>  
         </property>  
@@ -67,5 +68,6 @@
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basename" value="message" />
     </bean>
+    
 
 </beans>
