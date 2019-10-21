@@ -7,12 +7,12 @@
                 <form class="login-form" action="/SpringProject/loginSubmit" method="POST">
                     <div class="form-group">
                         <label for="exampleInputEmail1" class="text-uppercase">User name</label>
-                        <input type="text" class="form-control" placeholder="">
+                        <input type="text" class="form-control" placeholder="Enter User name" name="username">
 
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1" class="text-uppercase">Password</label>
-                        <input type="password" class="form-control" placeholder="">
+                        <input type="password" class="form-control" placeholder="Enter password" name="password">
                     </div>
 
 

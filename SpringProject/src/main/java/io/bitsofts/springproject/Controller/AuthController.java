@@ -61,8 +61,8 @@ public class AuthController {
         User u = new User();
         u.setUsername(request.getParameter("username"));
         u.setPassword(request.getParameter("password"));
-        u.setFirstName(request.getParameter("firstName"));
-        u.setLastName(request.getParameter("lastName"));
+        u.setFirst_Name(request.getParameter("first_Name"));
+        u.setLast_Name(request.getParameter("last_Name"));
         u.setAddress(request.getParameter("address"));
         u.setGender(request.getParameter("gender"));
         u.setPhone(Integer.parseInt(request.getParameter("phone")));

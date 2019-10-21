@@ -26,11 +26,11 @@ public class User {
     String username;
     
     String password;
-    String firstName;
-    String lastName;
+    String first_Name;
+    String last_Name;
     String address;
     String gender;
-    Integer phone;
+    int phone;
     String email;
     
     public int getId() {
@@ -57,21 +57,30 @@ public class User {
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirst_Name() {
+        return first_Name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirst_Name(String first_Name) {
+        this.first_Name = first_Name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_Name() {
+        return last_Name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_Name(String last_Name) {
+        this.last_Name = last_Name;
     }
+
+    public int getPhone() {
+        return phone;
+    }
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
 
     public String getAddress() {
         return address;
@@ -89,13 +98,7 @@ public class User {
         this.gender = gender;
     }
 
-    public Integer getPhone() {
-        return phone;
-    }
 
-    public void setPhone(Integer phone) {
-        this.phone = phone;
-    }
 
     public String getEmail() {
         return email;
