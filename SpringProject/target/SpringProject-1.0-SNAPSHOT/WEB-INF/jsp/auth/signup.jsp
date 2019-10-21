@@ -10,6 +10,7 @@
                 </form>
             </div>
             <div class="col-md-9 register-right">
+                <form action="/SpringProject/signupSubmit" method="POST">
 
                 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                     <li class="nav-item">
@@ -20,7 +21,7 @@
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <form>
+                   
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <h3 class="register-heading">Apply as a Stuff</h3>
                         <div class="row register-form">
@@ -65,6 +66,7 @@
                     <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <h3  class="register-heading">Apply as a Patient</h3>
                         <div class="row register-form">
+                            <form>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="User Name *" name="Username" />
@@ -101,9 +103,11 @@
 
                                 <input type="submit" class="btnRegister"  value="Register"/>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
+                    </form>
 
             </div>
         </div>
