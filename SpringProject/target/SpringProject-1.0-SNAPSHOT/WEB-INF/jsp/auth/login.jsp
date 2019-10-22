@@ -1,5 +1,6 @@
-
+<body style="background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDMK8VM2JKlg3xosK1eaVFixSqf95NKy25S0LBFL6xPpn3uru_) , no-repeat">
 <section>
+    
     <div class="container">
         <div class="row">
             <div class="col-md-4 login-sec">
@@ -84,3 +85,4 @@
 
 
 </section>
+</body>
