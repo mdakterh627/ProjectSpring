@@ -56,8 +56,8 @@
                                 <i class="fa fa-bars"></i>
                             </button>
                             <!-- End Toggle Nav Link For Mobiles -->
-                            <a class="navbar-brand" href="#">
-                                <h3>Bootstrap</h3>
+                            <a class="navbar-brand" href="home.jsp">
+                                <h3>DH Memorial Hospital</h3>
                             </a>
                         </div>
                         <div class="navbar-collapse collapse navbar-right">
@@ -72,7 +72,7 @@
                     </div>
                 </header>
             </div>
-            <nav id="mainnav"><img src="../images/Website/banner.jpg" width="1280" height="120">
+            <nav id="mainnav"><img src="" width="1280" height="120">
                 <ul style="list-style: none;">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../research.htm">Research</a></li>
@@ -114,7 +114,7 @@
             <div id= "content" align="center"> 
                 <br>
                 <div id="content-spacer-top"> </div>
-                <div id="content-inner"> <!-- TemplateBeginEditable name="EditRegion3" --  >EditRegion3<!-- TemplateEndEditable --></div>
+                <div id="content-inner"> </div>
                 <div id="content-space bottom"></div>
 
             </div>
@@ -123,17 +123,17 @@
             <footer class="footer" id="footer">
                 <div align="center">
                     <p>
-                        Status: Freelance available, seeking full-time employment for Cloud Vendor      
+                        Status: Our service is abailable in all pepole.     
                         <br>
-                        Dual-Location: San Jose/San Francisco, CA
+                        Location: Narsingdi Shadar Narsingdi.
                         <br>
                         Ph: (408) 644-8979
                         <br>
-                        Email:SangamPatel.MBA@gmail.com 
+                        Email:dh_memorialhospital627@gmail.com 
                         <br>
-                        Web-Resume: http://SangamPatel.com
+                        Web-Resume: http://DHmemorialHospital.com
                         <br>
-                        LinkedIn Profile: http://LinkedIn.com/IN/SangamPatel
+                        LinkedIn Profile: http://LinkedIn.com/IN/DHmemorialHospital
                     </p>
                 </div>
             </footer>
