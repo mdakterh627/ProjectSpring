@@ -1,115 +1,115 @@
 
-<div class="container register">
-        <div class="row">
-            <div class="col-md-3 register-left">
-                <form action="login">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgOQIWEo7XYqSMEU0_7haoXWaHlSTBKI0mgBX8D42oE3yNg7ZP"  height="100px" width="1000px"/>
-                    <h3>Welcome to Our Services</h3>
-                    <p>Service is Our First things</p>
-                    <input type="submit" name="login" value="Login"  /><br/>
-                </form>
-            </div>
-            <div class="col-md-9 register-right">
-                <form action="/SpringProject/signupSubmit" method="POST">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Stuff</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Patient</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                   
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <h3 class="register-heading">Apply as a Stuff</h3>
-                        <div class="row register-form">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="User Name *" name="Username" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password *" name="password" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name *" name="firstName"/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name *" name="lastName" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Address *" name="address" />
-                                </div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Register Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
+        <style type="text/css">  
+            body{
+                background-image: url(http://www.joburgchiropractor.co.za/images/background.jpg);
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="container" style="margin-top: 5%;">
+            <div class="row">
+                <div class="col-sm-4"> </div>
+                <div class="col-md-4">
+
+                    <h1 class="text-center text-success"> Register Form</h1>
+                    <br/>
+
+                    <div class="col-sm-12">
+
+                        <ul class="nav nav-pills" >
+                            <li class="" style="width:50%"><a class="btn btn-lg btn-default" data-toggle="tab" href="#home">Doctor</a></li>
+
+                            <li class=" " style="width:48%"><a class=" btn btn-lg btn-default" data-toggle="tab" href="#menu1">patient</a></li>
+                        </ul>
+
+                        <br/>
+
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane fade in active">
+
+                                <form action="signupSubmit" method="POST">
+
+                                    <div class="form-group">
+                                        <label for="UserName">Doctor-name</label>
+                                        <input type="text" class="form-control" id="email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email address:</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" class="form-control" id="pwd">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="pwd">Confirm Password:</label>
+                                        <input type="password" class="form-control" id="pwd">
+                                    </div>
+                                    <button type="submit" class="btn btn-default btn-lg">Submit</button>
+                                    <button type="submit" class=" pull-right btn-link"><a href="www.google.com">Forget password</a></button>
+
+                                </form>
+                                <br/>
+                                <a href="login" class="pull-right btn btn-block btn-danger" > Already Register ?   </a>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" name="email" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="number" minlength="5" maxlength="11" name="phone" class="form-control" placeholder="Your Phone *" />
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-control">
-                                        <option class="hidden"  selected disabled>Select Gender</option>
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                        <option>Others</option>
-                                    </select>
-                                </div>
 
-                                <input type="submit" class="btnRegister"  value="Register"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <h3  class="register-heading">Apply as a Patient</h3>
-                        <div class="row register-form">
-                            <form>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="User Name *" name="Username" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password *" name="password" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="First Name *" name="firstName"/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name *" name="lastName" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Address *" name="address" />
-                                </div>
+                            <div id="menu1" class="tab-pane fade">
 
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" name="email" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="number" minlength="5" maxlength="11" name="phone" class="form-control" placeholder="Your Phone *" />
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-control">
-                                        <option class="hidden"  selected disabled>Select Gender</option>
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                        <option>Others</option>
-                                    </select>
-                                </div>
+                                <form action="signupSubmit" method="POST">
 
-                                <input type="submit" class="btnRegister"  value="Register"/>
+                                    <div class="form-group">
+                                        <label for="UserName">UserName</label>
+                                        <input type="text" class="form-control" id="email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email address:</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" class="form-control" id="pwd">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="pwd">Confirm Password:</label>
+                                        <input type="password" class="form-control" id="pwd">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Submit</button>
+
+                                    <button type="submit" class=" pull-right btn-link"><a href="www.google.com">Forget password</a></button>
+
+                                </form>
+                                <br/>
+                                <a href="login" class="pull-right btn btn-block btn-success" > Already Register ?   </a>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
-                    </form>
-
             </div>
         </div>
-</div>
+    </body>
+</html>
 

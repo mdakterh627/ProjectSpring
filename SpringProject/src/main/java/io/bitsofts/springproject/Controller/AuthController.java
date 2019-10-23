@@ -5,7 +5,6 @@
  */
 package io.bitsofts.springproject.Controller;
 
-
 import io.bitsofts.springproject.Model.User;
 import io.bitsofts.springproject.Repository.UserRepository;
 
@@ -22,42 +21,41 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class AuthController {
-    
+
     @Autowired
     private UserRepository repository;
-    
-    
+
     @RequestMapping(method = RequestMethod.GET, value = "/login")
-    public String loginGet(){
+    public String loginGet() {
         return "loginPage";
     }
+
     @RequestMapping(method = RequestMethod.GET, value = "/signup")
-    public String signupGet(){
+    public String signupGet() {
         return "signupPage";
     }
-    
-    @RequestMapping(method = RequestMethod.POST, value = "/loginSubmit")
-     public String loginSubmitPost(HttpServletRequest request, Model model) {
-         String username = request.getParameter("username");
-         String password = request.getParameter("password");
-         System.out.println("----------------- "+username);
-         if(!username.isEmpty() && !password.isEmpty()) {
-             User u = repository.findByUsernameAndPassword(username, password);
-             System.out.println("----- "+u.getUsername());
-             if(!u.equals(null)) {
-                 return "homePage";
-             } else {
-                 model.addAttribute("error", "User Name or Password does not  match!");
-                 return "loginPage";
-             }
-         }
-         model.addAttribute("error", "Input fileds");
-         return "loginPage";
-     }
-     
 
-@RequestMapping(method = RequestMethod.POST, value = "/signupSubmit")
-     public String signupSubmitPost(HttpServletRequest request, Model model) {
+    @RequestMapping(method = RequestMethod.POST, value = "/loginSubmit")
+    public String loginSubmitPost(HttpServletRequest request, Model model) {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        System.out.println("----------------- " + username);
+        if (!username.isEmpty() && !password.isEmpty()) {
+            User u = repository.findByUsernameAndPassword(username, password);
+            System.out.println("----- " + u.getUsername());
+            if (!u.equals(null)) {
+                return "homePage";
+            } else {
+                model.addAttribute("error", "User Name or Password does not  match!");
+                return "loginPage";
+            }
+        }
+        model.addAttribute("error", "Input fileds");
+        return "loginPage";
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/signupSubmit")
+    public String signupSubmitPost(HttpServletRequest request, Model model) {
         User u = new User();
         u.setUsername(request.getParameter("username"));
         u.setPassword(request.getParameter("password"));
@@ -67,15 +65,14 @@ public class AuthController {
         u.setGender(request.getParameter("gender"));
         u.setPhone(Integer.parseInt(request.getParameter("phone")));
         u.setEmail(request.getParameter("email"));
-        try{
-         repository.save(u);
-         return "loginPage";
-        }catch(Exception e){
-            System.out.println("error"+ e.getMessage());
-            model.addAttribute("error",e.getMessage());
-         return "LoginPage";
-     }
+        try {
+            repository.save(u);
+            return "loginPage";
+        } catch (Exception e) {
+            System.out.println("error" + e.getMessage());
+            model.addAttribute("error", e.getMessage());
+            return "LoginPage";
         }
-       
-        
+    }
+
 }
